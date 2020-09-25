@@ -1,3 +1,242 @@
 @import 'css-reset.css';
 
-/* CSS here :) */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* nav styling */
+.topnav {
+    background-color: #3a3633;
+    color: white;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.nav-links {
+    justify-content: flex-end;
+    position: absolute;
+    right: 0px;
+}
+
+span .navitem {
+    margin-left: 35px;
+    margin-right: 15px;
+}
+
+.navitem {
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    display: block;
+    max-height: 2.5em;
+    max-width: auto;
+    margin-left: 15px;
+}
+
+/* animation for .nav-links we're not there yet */
+
+span .navitem {
+    position: relative;
+}
+
+span .navitem::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all o.3s ease-in-out 0.3s;
+}
+
+span .navitem:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+/* styling home */
+
+.home-container {
+    min-height: calc(100vh - 40px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../imgs/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home {
+    color: white;
+    max-width: 75vw;
+    display: flex;
+    border: solid white 4px;
+    height: calc(50vh - 40px);
+}
+
+.falcon {
+    flex: 1;
+    font-size: 4.5em;
+    line-height: 1.5;
+    font-weight: bolder;
+    align-self: center;
+}
+
+.text-home {
+    flex: 2;
+    background-color: gray;
+    opacity: 48%;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-container {
+    display: flex;
+    flex: 1;
+    margin-left: 20px;
+}
+
+.dreams {
+    height: 3.5em;
+    font-size: 2.5em;
+    font-weight: bolder;
+    flex: 1;
+    margin-left: 20px;
+    margin-top: 12vh;
+}
+
+.col-2 {
+    margin-left: 15px;
+}
+
+/* Styling features */
+
+.features-container{
+    margin: 55px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px;
+}
+
+.feature-item > img {
+    height: 40px;
+    width: auto;
+    margin: 20px;
+}
+
+.feature-item > h3 {
+    margin: 15px;
+    font-weight: bolder;
+    font-size: 1.10em;
+}
+
+.feature-item > p {
+    margin: 15px;
+    font-weight: lighter;
+}
+
+.feature-link {
+    position: absolute;
+    bottom: 0;
+    background-color: #3a3633;
+}
+
+.feature-link > a {
+    text-decoration: none;
+    color: white;
+}
+
+/* styling Cool Slick */
+.cool-slick-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 75vh;
+    position: relative;
+}
+
+.cool-text {
+    flex: 1;
+    background-color: #3a3633;
+    color: white;
+}
+
+.cool-text > h1 {
+    margin: 35px;
+    font-size: 3em;
+    font-weight: bolder;
+}
+
+.cool-text > p {
+    margin: 35px;
+    font-size: 1.5em;
+}
+
+.slick-gradient {
+    flex: 1;
+    background: linear-gradient(90deg, rgba(255,255,255,1), rgba(22,62,113,1));
+    position: relative;
+}
+
+.slick-gradient > h1 {
+    position: absolute;
+    right: 35px;
+    top: 35px;
+    color: white;
+    font-size: 3em;
+    font-weight: bolder;
+}
+
+.slick-gradient > p {
+    position: absolute;
+    right: 35px;
+    top: 105px;
+    color: white;
+    font-size: 1.5em;
+}
+
+.this-looks-cool {
+    color: white;
+    border: solid whitesmoke 5px;
+    background-color:  #3a3633;
+    position: absolute;
+    top: 65%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 300px;
+    height: 100px;
+}
+
+.this-looks-cool > h2 {
+    color: red;
+    margin: 15px;
+}
+
+/* we need some animation here */
+.this-looks-cool > p {
+
+}
+
+/* styling pictures */
+.line{
+    display: flex;
+}
+
+img {
+    width: 33.3vw;
+}
