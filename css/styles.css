@@ -13,6 +13,43 @@ body {
     position: relative;
 }
 
+.mobile-nav{
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    z-index: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:  #3a3633;
+    width: 100%;
+}
+
+.mobile-nav-item{
+    text-decoration: none;
+    text-align: center;
+    padding: 8px;
+    color: white;
+    width: 100%;
+}
+
+.mobile-nav-item:hover {
+    background-color: #524f4f;
+}
+
+
+.hamburger:hover .mobile-nav {
+    display: flex;
+}
+
+.topnav:hover .mobile-nav{
+    display: flex;
+}
+.mobile-nav:hover{
+    display: flex;
+}
+
 .nav-links {
     justify-content: flex-end;
     position: absolute;
@@ -36,10 +73,21 @@ span .navitem {
     margin-left: 15px;
 }
 
-/* animation for .nav-links we're not there yet */
+.nav-links {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.hamburger{
+    display: none;
+}
+
+/* animation for .nav-links */
 
 span .navitem {
     position: relative;
+    height: 100%;
 }
 
 span .navitem::before {
@@ -52,7 +100,7 @@ span .navitem::before {
     background-color: white;
     visibility: hidden;
     transform: scaleX(0);
-    transition: all o.3s ease-in-out 0.3s;
+    transition: all 0.3s linear;
 }
 
 span .navitem:hover::before {
@@ -60,9 +108,11 @@ span .navitem:hover::before {
     transform: scaleX(1);
 }
 
+
 /* styling home */
 
 .home-container {
+    position: relative;
     min-height: calc(100vh - 40px);
     display: flex;
     justify-content: center;
@@ -74,18 +124,29 @@ span .navitem:hover::before {
 
 .home {
     color: white;
-    max-width: 75vw;
+    margin-right: 15%;
+    margin-left: 15%;
     display: flex;
     border: solid white 4px;
-    height: calc(50vh - 40px);
+    min-height: calc(50vh - 40px);
 }
 
 .falcon {
     flex: 1;
-    font-size: 4.5em;
+    font-size: 4em;
     line-height: 1.5;
+    padding: 15px;
     font-weight: bolder;
     align-self: center;
+}
+
+.dream-div{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    border-bottom: dotted rgba(255, 255, 255, 0.733) 3px;
+    margin: 15px;
 }
 
 .text-home {
@@ -103,12 +164,11 @@ span .navitem:hover::before {
 }
 
 .dreams {
-    height: 3.5em;
+    height: 3em;
     font-size: 2.5em;
     font-weight: bolder;
     flex: 1;
     margin-left: 20px;
-    margin-top: 12vh;
 }
 
 .col-2 {
@@ -120,21 +180,26 @@ span .navitem:hover::before {
 .features-container{
     margin: 55px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     position: relative;
+    flex-wrap: wrap;
 }
 
 .feature-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 25px;
+    justify-content: space-between;
+    margin: 15px;
+    padding: 35px;
+    max-width: 250px;
+    box-shadow: 0.5px 0.5px 2px 2px rgb(214, 218, 221);
 }
 
 .feature-item > img {
     height: 40px;
     width: auto;
-    margin: 20px;
+    padding: 10px;
 }
 
 .feature-item > h3 {
@@ -149,9 +214,18 @@ span .navitem:hover::before {
 }
 
 .feature-link {
-    position: absolute;
-    bottom: 0;
+    width: 85%;
+    text-align: center;
     background-color: #3a3633;
+    border-radius: 4px;
+    padding: 7px;
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+
+.feature-link:hover{
+    cursor: pointer;
+    border: solid 1px goldenrod;
 }
 
 .feature-link > a {
@@ -163,7 +237,7 @@ span .navitem:hover::before {
 .cool-slick-container {
     display: flex;
     flex-direction: column;
-    min-height: 75vh;
+    height: 75vh;
     position: relative;
 }
 
@@ -171,40 +245,36 @@ span .navitem:hover::before {
     flex: 1;
     background-color: #3a3633;
     color: white;
+    padding: 45px;
 }
 
 .cool-text > h1 {
-    margin: 35px;
     font-size: 3em;
     font-weight: bolder;
 }
 
 .cool-text > p {
-    margin: 35px;
+    margin-top: 35px;
     font-size: 1.5em;
 }
 
 .slick-gradient {
     flex: 1;
+    text-align: end;
     background: linear-gradient(90deg, rgba(255,255,255,1), rgba(22,62,113,1));
-    position: relative;
+    padding: 45px;
 }
 
 .slick-gradient > h1 {
-    position: absolute;
-    right: 35px;
-    top: 35px;
     color: white;
     font-size: 3em;
     font-weight: bolder;
 }
 
 .slick-gradient > p {
-    position: absolute;
-    right: 35px;
-    top: 105px;
     color: white;
-    font-size: 1.5em;
+    font-size: 1.3em;
+    margin-top: 35px;
 }
 
 .this-looks-cool {
@@ -212,14 +282,14 @@ span .navitem:hover::before {
     border: solid whitesmoke 5px;
     background-color:  #3a3633;
     position: absolute;
-    top: 65%;
-    left: 15%;
+    top: 50%;
+    left: 20%;
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     text-align: center;
-    width: 300px;
-    height: 100px;
+    width: 250px;
+    height: 120px;
 }
 
 .this-looks-cool > h2 {
@@ -233,10 +303,192 @@ span .navitem:hover::before {
 }
 
 /* styling pictures */
+
 .line{
+    width: 100%;
     display: flex;
 }
 
-img {
-    width: 33.3vw;
+.line > img {
+    width: calc(100%/3);
+}
+
+/* mailing list */
+.mailing-container {
+    margin: 70px auto;
+}
+
+.mailing-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mailing-list > label {
+    text-align: center;
+    margin: 10px;
+}
+
+.input {
+    display: flex;
+    margin: 10px;
+}
+
+.input > button:hover {
+    cursor: pointer;
+}
+
+.mailing-list > input button {
+    
+}
+
+.send {
+    background-color: #3a3633;
+    display: inline-block;
+    border: none;
+    padding: none;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.send-cat {
+    text-align: center;
+    margin: 10px;
+}
+
+/* footer */
+.footer {
+    margin: 70px auto;
+    display: flex;
+    justify-content: space-around;
+    line-height: 3;
+}
+
+/* mobile */
+
+/* Nav */
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .topnav {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .hamburger{
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 15px;
+        height: 100%;
+    }
+
+    .hamburger:hover{
+        cursor: pointer;
+    }
+    .hamburger:hover .mobile-nav{
+        display: flex;
+    }
+/* home */
+    .home-container{
+        height: 100%;
+    }
+    
+    .home {
+        border: none;
+        margin: 0;
+        width: 100vw;
+        display: block;
+    }
+
+    .falcon {
+        margin-left: 15px;
+        margin-bottom: 20px;
+        font-size: 2em;
+        display: block;
+    }
+    .text-home {
+        
+        margin: 0;
+    }
+    .dream-div{
+        display: block;
+        margin: 0;
+        border-bottom: none;
+        font-size: .5em;
+        margin-top: 15px;
+    }
+    .text-container {
+        display: block;
+        margin-right: 15px;
+    }
+    .col-2{
+        margin-left: 0;
+        margin-top: 15px;
+    }
+    /* feature section */
+    .feature-item{
+        padding: 25px;
+    }
+    /* cool slick section */
+    .this-looks-cool{
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 180px;
+        height: 90px;
+    }
+    .this-looks-cool > h2{
+        margin: 10px;
+    }
+    .cool-text{
+        padding: 20px;
+    }
+    .cool-text > h1 {
+        font-size: 2em;
+    }
+    .cool-text > p {
+        font-size: 1em;
+    }
+    .slick-gradient{
+        /* padding: 20px;
+        padding-top: 25%; */
+    }
+    .slick-gradient > h1 {
+        font-size: 2em;
+        padding-right: 20px;
+        padding-top: 50px;
+    }
+    .slick-gradient > p {
+        font-size: 1em;
+        padding-right: 20px;
+    }
+    /* image section */
+    .line{
+        flex-wrap: wrap;
+    }
+    .line > img {
+        margin: 0 ;
+        width: 100%;
+    }
+}
+
+@media (max-width: 1080px) {
+    .home{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .falcon {
+        font-size: 3em;
+    }
+    .dreams{
+        font-size: 2em;
+    }
 }

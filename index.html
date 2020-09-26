@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
     <link href="css/styles.css" rel="stylesheet" />
   </head>
@@ -15,14 +16,31 @@
           <span><a href="#"class="navitem">Gallery</a></span>
           <span><a href="#"class="navitem">Products</a></span>
         </div>
+        <div class="hamburger">
+          <img src="./imgs/menu.svg" alt="menu icon">
+          <nav class="mobile-nav">
+            <a href="#"class="mobile-nav-item">Features</a>
+            <a href="#"class="mobile-nav-item">Advantages</a>
+            <a href="#"class="mobile-nav-item">Gallery</a>
+            <a href="#"class="mobile-nav-item">Products</a>
+          </nav>
+        </div>
       </nav>
       <div class="home-container">
+        <!-- <nav class="mobile-nav">
+          <a href="#"class="mobile-nav-item">Features</a>
+          <a href="#"class="mobile-nav-item">Advantages</a>
+          <a href="#"class="mobile-nav-item">Gallery</a>
+          <a href="#"class="mobile-nav-item">Products</a>
+        </nav> -->
         <div class="home">
           <div class="falcon">
             <h1>Introducing Falcon 9</h1>
           </div>
           <div class="text-home">
-            <h2 class="dreams">We make dreams come true</h2>
+            <div class="dream-div">
+              <h2 class="dreams">We make dreams come true</h2>
+            </div>
             <div class="text-container">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
@@ -78,14 +96,14 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
             labore et dolore magna aliqua. Ut enim ad minim veniam
           </p>
+              <div class="this-looks-cool">
+                <h2>This looks cool</h2>
+                <p>Hover me if you like random animation</p>
+              </div>
         </div>
         <div class="slick-gradient">
           <H1>Slick gradient</H1>
           <p>Lorem ipsum?</p>
-        </div>
-        <div class="this-looks-cool">
-          <h2>This looks cool</h2>
-          <p>Hover me if you like random animation</p>
         </div>
       </div>
       <div class="images">
@@ -99,6 +117,52 @@
             <img src="./imgs/falconrocket.jpeg" alt="falconrocket">
             <img src="./imgs/funnycat.jpg" alt="funnycat">
         </div>
-    </div>
+      </div>
+      <div class="mailing-container">
+        <div class="mailing-list">
+          <label for="mailing list">
+            Register to our mailing list:
+          </label>
+          <div class="input">
+            <input type="email"/>
+            <button class="send">
+              <img src="./imgs/icon_send.svg" alt="send icon">
+            </button>
+          </div>
+        </div>
+        <div class="send-cat">
+          <input type="checkbox" />
+          <label class="checkbox-label">
+            Send me daily cat images
+          </label>
+        </div>
+      </div>
+      <div class="footer">
+          <div class="footer-content">
+            <p>About us</p>
+            <p>Privacy Policy</p>
+            <p>Legal notes</p>
+            <p>Copyrights</p>
+          </div>
+          <div class="footer-content">
+            <p>About us</p>
+            <p>Privacy Policy</p>
+            <p>Legal notes</p>
+            <p>Copyrights</p>
+          </div>
+          <div class="footer-content">
+            <p>About us</p>
+            <p>Privacy Policy</p>
+            <p>Legal notes</p>
+            <p>Copyrights</p>
+          </div>
+          <div class="footer-content">
+            <p>About us</p>
+            <p>Privacy Policy</p>
+            <p>Legal notes</p>
+            <p>Copyrights</p>
+          </div>
+      </div>
+    
   </body>
 </html>
